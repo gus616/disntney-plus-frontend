@@ -3,6 +3,7 @@ import Logo from "../../../public/disney-plus-logo-white-update.f384bde4d5a7f1f4
 import { PiTelevision } from "react-icons/pi";
 import { BsStar } from "react-icons/bs";
 import NavbarList from "./NavbarList";
+import UserDisplay from "./UserDisplay";
 const Navbar = () => {
 
   const links = [
@@ -44,11 +45,12 @@ const Navbar = () => {
   ]
 
   return (
-    <nav className="fixed top-0 left-0 w-full h-18 bg-black text-white font-bold flex flex-row items-center justify-between p-8 z-50 text-xs">
+    <nav className="fixed top-0 left-0 w-full h-18 bg-primary text-white font-bold flex flex-row items-center justify-between p-8 z-50 text-xs">
       <div className="flex items-center space-x-4 gap-10">
         <img src={Logo} alt="Logo" className="h-10 cursor-pointer" />
         <NavbarList links={links} />
       </div>
+      <UserDisplay />
     </nav>
   )
 }
