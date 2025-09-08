@@ -1,4 +1,4 @@
-import { BiAddToQueue, BiAlbum, BiHome, BiMoviePlay, BiSearch } from "react-icons/bi"
+import { BiAddToQueue, BiAlbum, BiFootball, BiHome, BiMoviePlay, BiSearch } from "react-icons/bi"
 import Logo from "../../../public/disney-plus-logo-white-update.f384bde4d5a7f1f455e2dc7d8d4348ae.png";
 import { PiTelevision } from "react-icons/pi";
 import { BsStar } from "react-icons/bs";
@@ -25,7 +25,7 @@ const Navbar = () => {
     {
       name: 'ESPN',
       href: '/espn',
-      icon: <BiAlbum size={24} />
+      icon: <BiFootball size={24} />
     },
     {
       name: 'Movies',

@@ -10,8 +10,8 @@ const CategoriesContainer = () => {
     if (!categories || categories.length === 0) return <div>No categories available</div>
 
     return (
-        <div className="w-full flex flex-row items-center justify-start space-x-3 overflow-x-auto scrollbar-hide p-3">
-            <ul className="flex space-x-3">
+        <div className="w-full flex flex-row items-center justify-center space-x-3 overflow-x-auto scrollbar-hide p-3 ">
+            <ul className="flex space-x-3 gap-5">
                 {categories?.map((category) => (
                    <CategoryItem key={category.id} category={category} />
                 ))}
