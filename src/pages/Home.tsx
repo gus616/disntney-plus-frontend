@@ -2,6 +2,7 @@ import { useMemo } from "react"
 import HeroCarrousel from "../components/HeroCarrousel"
 import type { Movie } from "../models/Movie"
 import CategoriesContainer from "../components/CategoriesContainer"
+import Recommendations from "../components/Recommendations"
 
 
 type HomeProps = {
@@ -19,6 +20,7 @@ const Home = ({ movies }: HomeProps) => {
         <main className="bg-primary min-h-screen px-16 py-8">
             <HeroCarrousel movies={recentMovies} />
             <CategoriesContainer />
+            <Recommendations />
         </main>
     )
 }

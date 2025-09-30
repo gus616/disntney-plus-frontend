@@ -1,17 +1,13 @@
 import { Route, Routes } from 'react-router-dom'
 import Navbar from './components/ui/Navbar'
 import Home from './pages/Home'
-import { CgSpinner } from 'react-icons/cg';
 import { useGetMoviesQuery } from './api/movieSlice';
+import Spinner from './components/ui/Spinner';
+import Error from './components/ui/Error';
 function App() {
-
   const { data: movies, isLoading, isError } = useGetMoviesQuery();
-
-  if (isLoading) return <CgSpinner className="animate-spin text-[15rem] text-cyan-400 fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
-
-  if (isError) return <div>Something went wrong</div>
-
-
+  if (isLoading) return <Spinner />
+  if (isError) return <Error />
   return (
     <>
       <Navbar />

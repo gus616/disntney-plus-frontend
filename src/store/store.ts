@@ -3,15 +3,17 @@ import { movieSlice } from '../api/movieSlice';
 import {useDispatch, useSelector } from "react-redux";
 import { setupListeners } from '@reduxjs/toolkit/query';
 import { categorySlice } from '../api/categorySlice';
+import { recommendationSlice } from '../api/recommendationSlice';
 
 
 export const store = configureStore({
   reducer: {
     [movieSlice.reducerPath]: movieSlice.reducer,
-    [categorySlice.reducerPath]: categorySlice.reducer
+    [categorySlice.reducerPath]: categorySlice.reducer,
+    [recommendationSlice.reducerPath]: recommendationSlice.reducer,
   },
   middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware().concat(movieSlice.middleware, categorySlice.middleware),
+    getDefaultMiddleware().concat(movieSlice.middleware, categorySlice.middleware, recommendationSlice.middleware),
 });
 
 
