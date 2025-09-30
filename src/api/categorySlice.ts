@@ -13,7 +13,7 @@ export const categorySlice = createApi({
         }),
         getCategoryById: builder.query<Category, string>({
             query: (id) => `categories/${id}`,
-            providesTags: (result, error, id) => [{ type: 'Category', id }]
+            providesTags: (_ , _error, id) => [{ type: 'Category', id }]
         })
     })
 });

@@ -13,7 +13,7 @@ export const movieSlice = createApi({
         }),
         getMovieById: builder.query({
             query: (id) => `movies/${id}`,
-            providesTags: (result, error, id) => [{ type: 'Movie', id }]
+            providesTags: (_result, _error, id) => [{ type: 'Movie', id }]
         })
     }),
 });
