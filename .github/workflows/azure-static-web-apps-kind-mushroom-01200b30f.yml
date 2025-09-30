@@ -26,6 +26,11 @@ jobs:
         run: npm logout || true
       - name: Authenticate with npm
         run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+        node-version: '20'   # or '22' if you prefer
+
       - name: Install OIDC Client from Core Package
         run: npm install @actions/core@1.6.0 @actions/http-client
       - name: Get Id Token
