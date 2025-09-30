@@ -4,7 +4,7 @@ import type { Category } from "../models/Category";
 
 export const categorySlice = createApi({
     reducerPath: 'categoryApi',
-    baseQuery: fetchBaseQuery({baseUrl: 'http://localhost:5218/api/'}),
+    baseQuery: fetchBaseQuery({baseUrl: 'https://disntneyplus-api001-bhc8amcsbbcbejfr.canadacentral-01.azurewebsites.net/api/'}),
     tagTypes: ['Categories', 'Category'],
     endpoints: (builder) => ({
         getCategories: builder.query<Category[], void>({

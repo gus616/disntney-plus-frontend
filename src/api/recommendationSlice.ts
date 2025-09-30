@@ -3,7 +3,7 @@ import type { Recommendation } from "../models/Recomendation";
 
 export const recommendationSlice = createApi({
     reducerPath: 'recommendationApi',
-    baseQuery: fetchBaseQuery({baseUrl: 'http://localhost:5218/api/'}),
+    baseQuery: fetchBaseQuery({baseUrl: 'https://disntneyplus-api001-bhc8amcsbbcbejfr.canadacentral-01.azurewebsites.net/api/'}),
     tagTypes: ['Recommendations'],
     endpoints: (builder) => ({
         getRecommendations: builder.query<Recommendation[], void>({

@@ -4,7 +4,7 @@ import type { Movie } from "../models/Movie";
 
 export const movieSlice = createApi({
     reducerPath: 'movieApi',
-    baseQuery: fetchBaseQuery({baseUrl: 'http://localhost:5218/api/'}),
+    baseQuery: fetchBaseQuery({baseUrl: 'https://disntneyplus-api001-bhc8amcsbbcbejfr.canadacentral-01.azurewebsites.net/api/'}),
     tagTypes: ['Movies', 'Movie'],
     endpoints: (builder) => ({
         getMovies: builder.query<Movie[], void>({
