@@ -12,8 +12,8 @@ const Recommendations = () => {
   return (
     <div className="w-full min-h-full flex flex-col gap-4 mb-8 mt-4">
       <h1 className="text-2xl text-white">Recommendations for you</h1>
-      <div className="w-full flex gap-2 overflow-x-auto scrollbar-hide overflow-hidden items-center">
-        <ul className="flex space-x-3 gap-5 pb-3 items-center">
+      <div className="w-full gap-2 overflow-x-auto scrollbar-hide overflow-hidden items-center">
+        <ul className="flex gap-5 pb-3 space-between px-20">
           {recommendations?.map((rec: Recommendation) => (
             <RecommendationItem key={rec.id.toString()} rec={rec} />
           ))}
