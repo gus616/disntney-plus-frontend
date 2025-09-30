@@ -22,7 +22,8 @@ jobs:
         with:
           submodules: true
           lfs: false
-
+      - name: Clear npm auth
+        run: npm logout || true
       - name: Authenticate with npm
         run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
       - name: Install OIDC Client from Core Package
